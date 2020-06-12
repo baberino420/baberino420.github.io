@@ -14,22 +14,38 @@
   	-webkit-animation-fill-mode: forwards;
 		}
 
+	audio {
+  	display: none;
+	}
+
 		@-webkit-keyframes animateThis {
   0% {
     width: 100px;
     height: 100px;
   }
-  100% {dans a buuty facehole
+  100% {
     width: 1000%;
     height: 1000%;
   }
 
-		</style>
+	</style>
   </head>
+
   <body>
-	<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-	<iframe src="abe.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
-  <IMG class="displayed" src="abe.png" >
+	<audio src="abe.mp3"></audio>
+	<button id="button">
+  	<i class="fas fa-volume-up"></i>
+	</button>
+
+
+	  <IMG class="displayed" src="abe.png" >
   </body>
+	<script>
+		window.addEventListener("DOMContentLoaded", event => {
+			const audio = document.querySelector("audio");
+			audio.volume = 1;
+			audio.play();
+			});
+	 </script>
 
 </html>
